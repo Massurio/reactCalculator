@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorMsg {
+  opacity: 1;
+  background-color: rgba(255, 0, 0, 0.44);
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  animation: shake 0.1s alternate linear;
+  animation-iteration-count: 2;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
+}
+
+.calcWrapper {
+  padding: 10px;
+  margin: 5px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 7px;
+}
+
+.screen {
+  color: rgb(211, 255, 14);
+  padding: 20px;
+  font-size: 1.5em;
+  width: 567px;
+  overflow-wrap: break-word;
+  background-color: rgb(136, 132, 190);
+  opacity: 0.5;
+}
+
+.buttons {
+  display: grid;
+  grid-template-areas:
+    'clear clear clear .'
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    'zero zero . . ';
+  gap: 2px;
+}
+.buttons > button:hover,
+.buttons > button:focus {
+  background-color: rgba(255, 240, 0, 0.75);
+}
+
+.btn {
+  height: 150px;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+.clear {
+  grid-area: clear;
+  width: 455px;
+}
+
+.zero {
+  grid-area: zero;
+  width: 303px;
+}
+h1 {
+  margin-top: 50px;
+  font-size: 35px;
+}
